@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WWI Lethal Technologies | Inquiry Project</title>
+    <!-- 
+        主界面 - 导航框架
+        子界面: Key Facts / Impact / Perspectives / Significance
+        所有详细内容待填充，图片为占位符
+    -->
+    <style>
+        /* 全局样式 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #0a0c12;
+            font-family: 'Georgia', 'Times New Roman', Times, serif;
+            color: #e0e4e8;
+            line-height: 1.5;
+        }
+
+        /* 导航栏 */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 5%;
+            background: #05070ccc;
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid #3e2a1f;
+            flex-wrap: wrap;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #dbb87c;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: #e0e4e8;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #dbb87c;
+        }
+
+        /* 英雄区 */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.85)), url('https://placehold.co/1600x600/2a241e/aa8e66?text=WWI+Battlefield+Placeholder') center/cover no-repeat;
+            padding: 5rem 2rem;
+            text-align: center;
+            border-bottom: 3px solid #6e4e2e;
+        }
+
+        h1 {
+            font-size: 3rem;
+            text-transform: uppercase;
+            background: linear-gradient(135deg, #c9b36b, #8b5a2b);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        /* 容器 */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* 占位区域 - 待填充内容 */
+        .placeholder-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .placeholder-card {
+            background: #14181f;
+            border: 1px solid #2e2a24;
+            border-radius: 12px;
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        .placeholder-card h3 {
+            color: #dbb87c;
+            margin-bottom: 1rem;
+        }
+
+        .img-placeholder {
+            background: #1e1913;
+            height: 150px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #6a5a48;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+        }
+
+        hr {
+            border-color: #2e2a24;
+            margin: 2rem 0;
+        }
+
+        footer {
+            background: #030507;
+            text-align: center;
+            padding: 2rem;
+            border-top: 1px solid #2a241e;
+            font-size: 0.8rem;
+        }
+
+        @media (max-width: 768px) {
+            .navbar { flex-direction: column; gap: 0.8rem; }
+            .nav-links { gap: 1rem; flex-wrap: wrap; justify-content: center; }
+            h1 { font-size: 2rem; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- ================= 导航栏 ================= -->
+<nav class="navbar">
+    <div class="logo">WWI LETHAL TECH</div>
+    <ul class="nav-links">
+        <li><a href="index.html">HOME</a></li>                    <!-- 主页 -->
+        <li><a href="key-facts.html">KEY FACTS</a></li>           <!-- 子界面1: 关键事实 -->
+        <li><a href="impact.html">IMPACT</a></li>                 <!-- 子界面2: 影响 -->
+        <li><a href="perspectives.html">PERSPECTIVES</a></li>     <!-- 子界面3: 多重视角 -->
+        <li><a href="references.html">REFERENCES</a></li>     <!-- 子界面4: 重要性 -->
+    </ul>
+</nav>
+
+<!-- ================= 英雄区 ================= -->
+<section class="hero">
+    <h1>WHICH NEW WEAPONS<br>MADE WWI MORE DEADLY?</h1>
+    <p style="margin-top: 1rem;">Industrial innovations transformed the battlefield into a slaughterhouse.</p>
+</section>
+
+<!-- ================= 页脚 ================= -->
+<footer>
+    <p>WWI Inquiry Project</p>
+</footer>
+
+</body>
+</html>

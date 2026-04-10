@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WWI Lethal Tech | Perspectives</title>
+    <!-- 
+        PERSPECTIVES 子界面
+        三个卡片: 士兵视角、平民视角、政治家视角
+        每个卡片一段核心原文 + 来源链接
+    -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #0a0c12;
+            font-family: 'Georgia', 'Times New Roman', Times, serif;
+            color: #e0e4e8;
+            line-height: 1.5;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 5%;
+            background: #05070ccc;
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid #3e2a1f;
+            flex-wrap: wrap;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #dbb87c;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: #e0e4e8;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #dbb87c;
+        }
+
+        .nav-links a.active {
+            color: #dbb87c;
+            border-bottom: 2px solid #dbb87c;
+            padding-bottom: 4px;
+        }
+
+        .page-header {
+            background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.85)), url('https://placehold.co/1600x400/2a241e/aa8e66?text=Multiple+Perspectives') center/cover no-repeat;
+            padding: 4rem 2rem;
+            text-align: center;
+            border-bottom: 3px solid #6e4e2e;
+        }
+
+        .page-header h1 {
+            font-size: 2.8rem;
+            text-transform: uppercase;
+            background: linear-gradient(135deg, #c9b36b, #8b5a2b);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .page-header p {
+            max-width: 700px;
+            margin: 1rem auto 0;
+            font-size: 1.1rem;
+            color: #ccc;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* 三个卡片网格 */
+        .perspective-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .perspective-card {
+            background: #14181f;
+            border: 1px solid #2e2a24;
+            border-radius: 12px;
+            overflow: hidden;
+            transition: transform 0.2s;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .perspective-card:hover {
+            transform: translateY(-4px);
+            border-color: #b87c4f;
+        }
+
+        .card-header {
+            background: #1e1913;
+            padding: 1.2rem;
+            border-bottom: 1px solid #3e2a1f;
+            text-align: center;
+        }
+
+        .card-header h2 {
+            font-size: 1.6rem;
+            margin: 0;
+            color: #dbb87c;
+        }
+
+        .card-content {
+            padding: 1.5rem;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .quote-block {
+            background: #0f1117;
+            border-left: 3px solid #b87c4f;
+            padding: 1rem;
+            margin: 0 0 1rem 0;
+            font-style: italic;
+            color: #c0c7cf;
+        }
+
+        .source-link {
+            margin-top: auto;
+            font-size: 0.75rem;
+            color: #6a5a48;
+            text-align: center;
+            padding-top: 1rem;
+            border-top: 1px solid #2a241e;
+        }
+
+        .source-link a {
+            color: #8a7a64;
+            text-decoration: none;
+        }
+
+        .source-link a:hover {
+            color: #dbb87c;
+        }
+
+        footer {
+            background: #030507;
+            text-align: center;
+            padding: 2rem;
+            border-top: 1px solid #2a241e;
+            font-size: 0.8rem;
+        }
+
+        @media (max-width: 768px) {
+            .navbar { flex-direction: column; gap: 0.8rem; }
+            .nav-links { gap: 1rem; flex-wrap: wrap; justify-content: center; }
+            .page-header h1 { font-size: 2rem; }
+            .container { padding: 1rem; }
+            .perspective-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="logo">WWI LETHAL TECH</div>
+    <ul class="nav-links">
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="key-facts.html">KEY FACTS</a></li>
+        <li><a href="impact.html">IMPACT</a></li>
+        <li><a href="perspectives.html" class="active">PERSPECTIVES</a></li>
+        <li><a href="references.html">REFERENCES</a></li>
+    </ul>
+</nav>
+
+<div class="page-header">
+    <h1>MULTIPLE PERSPECTIVES</h1>
+    <p>Three voices from the war</p>
+</div>
+
+<main class="container">
+    <div class="perspective-grid">
+        
+        <!-- 卡片1: 士兵视角 -->
+        <div class="perspective-card">
+            <div class="card-header">
+                <h2>SOLDIERS</h2>
+            </div>
+            <div class="card-content">
+                <div class="quote-block">
+                    "According to the report, at least two enlisted men were 'panic stricken' and did not put on their gas masks. ... Mustard gas would remain on hay and manure piles, and in mud that the infantry soldiers and medics needed to walk through."
+                    <div style="margin-top: 0.5rem; font-size: 0.8rem; color: #8a7a64;">— U.S. National Archives, Gas attack report, 1918</div>
+                </div>
+                <div class="source-link">
+                    Source: <a href="https://text-message.blogs.archives.gov/2011/06/20/how-world-war-i-also-became-known-as-the-chemists-war/" target="_blank">U.S. National Archives</a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 卡片2: 平民视角 -->
+        <div class="perspective-card">
+            <div class="card-header">
+                <h2>CIVILIANS</h2>
+            </div>
+            <div class="card-content">
+                <div class="quote-block">
+                    "This Club was composed of about 15 young women who sent letters and packages of socks, tooth brushes, chocolates, biscuits, Bovril and other 'comforts' to soldiers serving overseas between 1917 and 1919."
+                    <div style="margin-top: 0.5rem; font-size: 0.8rem; color: #8a7a64;">— The Soldiers' Comfort Club, Toronto, IWM archives</div>
+                </div>
+                <div class="source-link">
+                    Source: <a href="https://livesofthefirstworldwar.iwm.org.uk/community/3706/" target="_blank">Imperial War Museums</a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 卡片3: 政治家视角 -->
+        <div class="perspective-card">
+            <div class="card-header">
+                <h2>POLITICAL LEADERS</h2>
+            </div>
+            <div class="card-content">
+                <div class="quote-block">
+                    "Faced with the growing use of poisonous gases on the battlefield, causing terrible injuries, the ICRC appealed publicly for a ban on their use. ... On 6 February 1918 it launched an appeal against the use of poisonous gases."
+                    <div style="margin-top: 0.5rem; font-size: 0.8rem; color: #8a7a64;">— International Committee of the Red Cross (ICRC)</div>
+                </div>
+                <div class="source-link">
+                    Source: <a href="https://www.icrc.org/en/document/icrc-wwi-efforts-ban-chemical-warfare" target="_blank">International Committee of the Red Cross</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <p>WWI Inquiry Project</p>
+</footer>
+
+</body>
+</html>
